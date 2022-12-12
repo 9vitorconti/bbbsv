@@ -18,10 +18,10 @@ const onClickHandler = () =>{
       if(star===1){
         return <i key={Math.random()} className="fa-solid fa-star"></i>;
       }
-      if(star===0.5){
-        return <i key={Math.random()} className="fa-solid fa-star-half-stroke"></i>
+      if(star===0){
+        return <i key={Math.random()} className="fa-solid fa-star-half"></i>
       }
-      return <i key={Math.random()} className="fa-regular fa-star"></i>
+
     });
 
     return (
@@ -35,11 +35,11 @@ const onClickHandler = () =>{
         </div>
         <div className="flex justify-center mx-auto">
           <div>
-            <p className="text-xs mt-8 font-mono"><span className="font-bold font-sans">Name:</span> {trainer.name} </p>
-            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans">Classes:</span>  {trainer.totalClasses}</p>
-            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans">Total Talk:</span>  <span className="text-red-600">{convertMsToTimeString(trainer.totalTalkTime)}</span></p>
-            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans">AVG Talk per class:</span>  <span className="text-red-600">{convertMsToTimeString(trainer.totalTalkTime/trainer.totalClasses)}</span></p>
-            <p className="text-xs mt-2 font-mono"><span className="font-bold font-sans">Rating: </span><span className="ml-1">{renderedRating}</span></p>
+            <p className="text-xs mt-8 font-mono"><span className="font-bold font-sans"><i class="fa-solid fa-user-tie mr-2"> </i>Name:</span> {trainer.name} </p>
+            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans"><i class="fa-solid fa-book-open mr-2"> </i>Classes:</span>  {trainer.totalClasses}</p>
+            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans"><i class="fa-solid fa-microphone mr-2"> </i>Total Talk:</span>  <span className="text-red-600">{convertMsToTimeString(trainer.totalTalkTime)}</span></p>
+            <p className="text-xs mt-1 font-mono"><span className="font-bold font-sans"><i class="fa-solid fa-microphone mr-2"> </i>AVG Talk per class:</span>  <span className="text-red-600">{convertMsToTimeString(trainer.totalTalkTime/trainer.totalClasses)}</span></p>
+            <p className="text-xs mt-2 font-mono"><span className="font-bold font-sans"><i class="fa-solid fa-certificate mr-2"> </i>Rating: </span><span className="ml-1">{renderedRating}</span></p>
           </div>
           
         </div>

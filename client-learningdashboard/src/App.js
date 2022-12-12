@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import SearchBar from './SearchBar';
+
 import Card from './Card';
 import Spin from './Spin';
 import {fetchData} from './api';
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div>
-      {/* <SearchBar /> */}
+    
       {trainer ? '' : 
       <div className={`flex flex-wrap justify-center ${trainer ? 'invisible' : ''}`}>
         {isLoading ? <Spin/> : ''}
